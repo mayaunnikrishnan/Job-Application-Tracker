@@ -1,0 +1,136 @@
+:root{
+    --background-light:#f9f9f9;
+    --background-dark:#2c2c2c;
+    --text-light:#000;
+    --text-dark:#fff;
+    --card-bg-light:#fff;
+    --card-bg-dark:#444;
+}
+
+/* Global styles */
+
+body{
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 2s ease,color 2s ease;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body.dark{
+    background-color: var(--background-dark);
+    color:var(--text-dark);
+}
+
+/* Header*/
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #6200ea;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    padding:10px 20px;
+}
+
+header h1{
+    font-family: 1.5rem;
+    margin:0;
+    flex:1;
+}
+
+header button{
+    background-color: #370063;
+    color:white;
+    font-size: 1rem;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Main */
+
+main{
+    padding: 20px;
+}
+
+/* Section Add job */
+
+#addJob{
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    margin-bottom: 20px;
+}
+
+#addJob input{
+    font-size: 1rem;
+    padding: 10px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    flex:1;
+    min-width: 200px;
+}
+
+#addJob Button {
+    background-color: #6200ea;
+    color:white;
+    font-size: 1rem;
+    border:none;
+    border-radius: 5px;
+    padding:10px;
+    cursor: pointer;
+}
+
+/* section joblist */
+
+#jobList{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* Job Card in joblist */
+
+.jobCard{
+    background-color: var(--card-bg-light);
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 2s ease,transform 0.3s;
+}
+
+body.dark .jobCard{
+    background-color: var(--card-bg-dark);
+}
+
+.jobCard:hover{
+    transform: translateY(-5px);
+}
+
+@media (max-width:768px){
+    header h1{
+        font-size: 1.2rem;
+    }
+    #addJob{
+        flex-direction: column;
+    }
+    #addJob input,#addJob button {
+        width:100;
+    }
+} 
+
+@media (max-width:480px){
+    header h1{
+        font-size: 1rem;
+    }
+    header button {
+        font-size: 0.9rem;
+        padding:8px;
+    }
+    #jobList{
+        grid-template-columns: 1fr;
+    }
+}
