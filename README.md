@@ -13,7 +13,7 @@ A responsive web application that helps users track their job applications. The 
 
 ## Live Demo
 
-Visit the live site to see the application in action: [Job Application Tracker](https://your-site-address.com)
+Visit the live site to see the application in action: [Job Application Tracker](https://mayaunnikrishnan.github.io/Job-Application-Tracker/)
 
 ## Technologies Used
 
